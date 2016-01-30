@@ -1,4 +1,6 @@
-download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "har.zip")
+library(dplyr)
+
+#download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "har.zip")
 unzip("har.zip")
 features <- read.csv(".\\UCI HAR Dataset\\features.txt", header=FALSE, sep=" ", stringsAsFactors = FALSE)
 features$var <- gsub("[^a-z0-9]", "", tolower(features[,"V2"]))
@@ -27,9 +29,9 @@ xy <- rbind(xytrain, xytest)
 xyact <- merge(xy, activity, by.x = "idact", by.y = "id")
 
 xycol <- names(xyact)
-xycol <- xycol[grep("mean|std|activity|subject", xycol)]
+xycol <- xycol[grep("mean|standarddeviation|activity|subject", xycol)]
 xyactr <- xyact[,xycol]
-xyg <- group_by(xyactr, activity, subject)
-xytidy <- summarise_each(xyg, funs(mean), -activity, -subject)
+xyg <- group_by(xyactr, subject, activity)
+xytidy <- summarise_each(xyg, funs(mean), -subject, -activity)
 
 write.table(xytidy, file="UCIHAR_SummaryTidyDataset.csv", na="", dec=".", sep=",", quote = FALSE)
