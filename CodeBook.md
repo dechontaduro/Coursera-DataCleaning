@@ -47,18 +47,17 @@ Variables:
 
 The below variables follow next rule:
 - First segment contains time, frequency or angle refers to time domain signals, Fast Fourier Transform of signals and Angle between to vectors, respectively.
-Ej. __time__*bodyaccelerometermeanx*, __frequency__*bodygyroscopemeany*, __angle__*timebodyaccelerometermeangravity*.
-- Second segment contains body or gravity refers to the acceleration signal was then separated into body and gravity acceleration signals, respectively.
-Ej. *frequency*__body__*accelerometermeanx*
-If first segment is angle, second segments indicates vectors to measure angle 
-  * tbody vs meangravity
-  * timebodyaccelerometermean vs gravity
+**Ej.:** __time__*bodyaccelerometermeanx*, __frequency__*bodygyroscopemeany*, __angle__*timebodyaccelerometermeangravity*.
+- Second segment contains body or gravity refers to the acceleration signal was then separated into body and gravity acceleration signals, respectively. Ej. *frequency*__body__*accelerometermeanx*
+- If first segment is angle, second segments indicates vectors to measure angle **Ej.:** angle**timebodyaccelerometermean**_gravity_, angle**x**_gravitymean_
+  * timebody vs meangravity
+  * timebodyaccelerometermean vs gravity.
   * timebodyaccelerometerjerkmean vs gravitymean
   * timebodygyroscopemean vs gravitymean
   * timebodygyroscopejerkmean vs gravitymean
   * x vs gravitymean
   * y vs gravitymean
   * z vs gravitymean
-- Third segment contains accelerometer or gyroscope refers to accelerometer and gyroscope 3-axial raw signals from smartphone, respectively
-- Forth segment (if apply) contains jerk or magnitude that refers to the body linear acceleration and angular velocity were derived in time to obtain Jerk signals or magnitude of these three-dimensional signals were calculated using the Euclidean norm, respectively.
-- Last segment contains mean, standarddeviation that refers to original summarize made to variables.
+- Third segment contains accelerometer or gyroscope refers to accelerometer and gyroscope 3-axial raw signals from smartphone, respectively. **Ej.:** _timebody_**gyroscope**_meanx_, _timebody_**accelerometer**_jerkmeany_
+- Forth segment (if apply) contains jerk or magnitude that refers to the body linear acceleration and angular velocity were derived in time to obtain Jerk signals or magnitude of these three-dimensional signals were calculated using the Euclidean norm, respectively. **Ej.:** _frequencybodyaccelerometer_**jerk**_meanfreqx_, _frequencybodyaccelerometer_**magnitude**_mean_
+- Last segment contains mean, standarddeviation that refers to original summarize made to variables and if apply axis of Triaxial measure. **Ej.:** _angletbodyaccelerometerjerkmeangravity_**mean**, _timebodyaccelerometermagnitude_**standarddeviation**
