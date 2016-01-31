@@ -1,7 +1,8 @@
 library(dplyr)
 
-#download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "har.zip")
+download.file("https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip", "har.zip")
 unzip("har.zip")
+
 features <- read.csv(".\\UCI HAR Dataset\\features.txt", header=FALSE, sep=" ", stringsAsFactors = FALSE)
 features$var <- gsub("[^a-z0-9]", "", tolower(features[,"V2"]))
 features$var <- gsub("^t", "time", features$var)
