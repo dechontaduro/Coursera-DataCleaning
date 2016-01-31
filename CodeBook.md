@@ -40,7 +40,7 @@ The dataset includes the following files:
 - 'README.md': Process to obtain this dataset
 - 'UCIHAR_SummaryTidyDataset.csv': Tidy dataset
 
-Variables:
+Variables
 ==========
 - subject: An identifier of the subject who carried out the experiment.
 - activity: Its activity label
