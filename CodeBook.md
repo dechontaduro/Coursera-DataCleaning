@@ -48,7 +48,7 @@ Variables:
 The below variables follow next rule:
 - First segment contains time, frequency or angle refers to time domain signals, Fast Fourier Transform of signals and Angle between to vectors, respectively.
 **Ej.:** __time__*bodyaccelerometermeanx*, __frequency__*bodygyroscopemeany*, __angle__*timebodyaccelerometermeangravity*.
-- Second segment contains body or gravity refers to the acceleration signal was then separated into body and gravity acceleration signals, respectively. Ej. *frequency*__body__*accelerometermeanx*
+- Second segment contains body or gravity refers to the acceleration signal was then separated into body and gravity acceleration signals, respectively. **Ej.:** *frequency*__body__*accelerometermeanx*, _time_**gravity**_accelerometermeanz_
 - If first segment is angle, second segments indicates vectors to measure angle **Ej.:** angle**timebodyaccelerometermean**_gravity_, angle**x**_gravitymean_
   * timebody vs meangravity
   * timebodyaccelerometermean vs gravity.
