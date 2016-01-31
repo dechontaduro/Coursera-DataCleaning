@@ -3,7 +3,7 @@ Repository to Data Cleaning Course in Coursera
 
 CodeBook
 ========
-In codebook.md you found description of tidy dataset
+In [codebook.md](https://github.com/dechontaduro/Coursera-DataCleaning/blob/master/CodeBook.md) you found description of tidy dataset
 
 Process
 =======
