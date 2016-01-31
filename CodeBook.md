@@ -31,7 +31,7 @@ For each record it is provided:
 ===============================
 - An identifier of the subject who carried out the experiment.
 - Its activity label. 
-- Mean of each variable (53 variables is a subset of variables of original dataset)
+- Mean of each variable (86 variables is a subset of variables of original dataset)
 
 The dataset includes the following files:
 =========================================
@@ -47,7 +47,9 @@ Variables:
 
 The below variables follow next rule:
 - First segment contains time, frequency or angle refers to time domain signals, Fast Fourier Transform of signals and Angle between to vectors, respectively.
+Ej. __time__*bodyaccelerometermeanx*, __frequency__*bodygyroscopemeany*, __angle__*timebodyaccelerometermeangravity*.
 - Second segment contains body or gravity refers to the acceleration signal was then separated into body and gravity acceleration signals, respectively.
+Ej. *frequency*__body__*accelerometermeanx*
 If first segment is angle, second segments indicates vectors to measure angle 
   * tbody vs meangravity
   * timebodyaccelerometermean vs gravity
