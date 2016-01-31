@@ -5,8 +5,10 @@ CodeBook
 ========
 In [codebook.md](https://github.com/dechontaduro/Coursera-DataCleaning/blob/master/CodeBook.md) you found description of tidy dataset
 
-Process
+Script
 =======
+The file [run_analysis.R](https://github.com/dechontaduro/Coursera-DataCleaning/blob/master/run_analysis.R) contains **R** script to generate Tidy Dataset run the next steps
+
 1. Download file
 2. Extract file
 3. Read names of variables from features
